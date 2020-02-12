@@ -4,3 +4,6 @@
 read -p "Enter number one : " a
 read -p "Enter number two : " b
 read -p "Enter number three : " c
+
+#Computations
+compute1=`echo $(($a+$b*$c)) | bc`
