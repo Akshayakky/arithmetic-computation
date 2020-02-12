@@ -8,3 +8,4 @@ read -p "Enter number three : " c
 #Computations
 compute1=`echo $(($a+$b*$c)) | bc`
 compute2=`echo $(($a*$b+$c)) | bc`
+compute3=`echo $(($c+$a/$b)) | bc`
