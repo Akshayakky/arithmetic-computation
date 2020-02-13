@@ -52,3 +52,24 @@ echo ${array[@]}
 }
 
 descendingSortedArray=($(descendingSort ${resultArray[@]}))
+
+
+#FUNCTION TO SORT ARRAY IN ASCENDING ORDER
+function  ascendingSort(){
+array=("$@")
+for (( i=0;i<$((${#array[@]}-1));i++ ))
+do
+	for (( j=0;j<$((${#array[@]}-1));j++ ))
+	do
+		if (( $(echo "${array[j]} > ${array[j+1]}" |bc -l) ))
+		then
+			temp=${array[j]}
+			array[j]=${array[j+1]}
+			array[j+1]=$temp
+		fi
+	done
+done
+echo ${array[@]}
+}
+
+ascendingSortedArray=($(ascendingSort ${resultArray[@]}))
