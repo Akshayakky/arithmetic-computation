@@ -11,13 +11,13 @@ read -p "Enter number one : " a
 read -p "Enter number two : " b
 read -p "Enter number three : " c
 
-#Computations
+#COMPUTATIONS
 compute1=`echo "scale=2; $a+$b*$c" | bc`
 compute2=`echo "scale=2; $a*$b+$c" | bc`
 compute3=`echo "scale=2; $c+$a/$b" | bc`
 compute4=`echo "$a%$b+$c" | bc`
 
-#Declaring Dictionary
+#DECLARING DICTIONARY
 declare -A resultDictionary
 
 #STORING THE RESULTS IN DICTIONARY
@@ -51,6 +51,7 @@ done
 echo ${array[@]}
 }
 
+#STORING SORTED ARRAY IN DESCENDINGSORTEDARRAY
 descendingSortedArray=($(descendingSort ${resultArray[@]}))
 
 
@@ -72,4 +73,5 @@ done
 echo ${array[@]}
 }
 
+#STORING SORTED ARRAY IN ASCENDINGSORTEDARRAY
 ascendingSortedArray=($(ascendingSort ${resultArray[@]}))
