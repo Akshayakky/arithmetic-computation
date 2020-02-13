@@ -26,3 +26,8 @@ resultDictionary[compute2]=$compute2
 resultDictionary[compute3]=$compute3
 resultDictionary[compute4]=$compute4
 
+while [ $count -le $NO_OF_COMPUTES ]
+do
+	resultArray[$count]=${resultDictionary[compute$count]}
+	((count++))
+done
